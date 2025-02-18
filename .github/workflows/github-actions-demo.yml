@@ -4,7 +4,7 @@ on:
   release:
     types: [released]
 jobs:
-  Explore-GitHub-Actions:
+  Generate-Excel-File:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
