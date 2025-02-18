@@ -3,7 +3,6 @@ import logging
 import os
 import pandas as pd
 import re
-import xlwings as xw
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
