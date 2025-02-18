@@ -1,10 +1,10 @@
 name: Generate Excel file on release
 run-name: Generating Excel file for release ${{github.ref_name}}
-on:  [push]
-  #release:
-    #types: [released]
-    #branches:
-      #-main
+on:
+  release:
+    types: [released]
+    branches:
+      -main
 jobs:
   Generate-Excel-File:
     runs-on: windows-latest
