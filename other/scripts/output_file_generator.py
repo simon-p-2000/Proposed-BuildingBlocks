@@ -154,7 +154,7 @@ def main():
             args.directory, args.exclude, args.keyword)
         df = create_df(markdown_files)
         output_file_path = args.output + "." + args.file_format
-
+        logging.info("Made it this far")
         if args.file_format == 'csv':
             write_to_csv(df, output_file_path)
             logging.info(f"CSV file successfully created at {output_file_path}")
