@@ -3,7 +3,6 @@ import logging
 import os
 import pandas as pd
 import re
-import xlwings as xw
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -39,19 +38,7 @@ def write_to_excel(df, output_excel):
         df (pandas.DataFrame): DataFrame to write to Excel.
         output_csv (str): Path to the output Excel file.
     """
-    wb = xw.Book()
-    sheet = wb.sheets[0]
-    sheet['A1'].value = df
-    sheet['A1'].options(pd.DataFrame, expand='table').value
-    
-    # remove column 1 which is the df index
-    xw.Range("A:A").api.Delete()
-
-    # set header columns bold and autofit the column width to the headers
-    xw.Range((1,1), (1, len(df.columns))).font.bold = True
-
-    wb.save(output_excel)
-    wb.close()
+    df.to_excel(output_excel, index=False)
 
 def write_to_csv(df, output_csv):
     """
@@ -154,7 +141,6 @@ def main():
             args.directory, args.exclude, args.keyword)
         df = create_df(markdown_files)
         output_file_path = args.output + "." + args.file_format
-
         if args.file_format == 'csv':
             write_to_csv(df, output_file_path)
             logging.info(f"CSV file successfully created at {output_file_path}")
