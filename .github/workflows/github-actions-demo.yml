@@ -1,6 +1,6 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Generate Excel file on release
+run-name: Generating Excel file for release ${{github.ref_name}}
+on: [release]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
