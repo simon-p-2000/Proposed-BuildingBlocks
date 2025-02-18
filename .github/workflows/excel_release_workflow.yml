@@ -28,7 +28,7 @@ jobs:
           pip install pandas
           pip install xlwings
       - name: execute py script
-        run: python other/scripts/output_file_generator.py ${{ github.repository }}/
+        run: python other/scripts/output_file_generator.py ${{ github.workspace }}/
       - name: commit files
         run: |
           git config --local user.email "simon.pusterhofer@avl.com"
