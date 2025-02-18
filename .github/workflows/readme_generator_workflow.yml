@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - 'main'
+    paths-ignore:
+      - 'other/'
+      - '.github/'
+      - '.gitignore'
+      - '.LICENSE.txt'
+      - 'README.md'
+      - 'output.xlsx'
 jobs:
   Generate-readme-file:
     runs-on: ubuntu-latest
