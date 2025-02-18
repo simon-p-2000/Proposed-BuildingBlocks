@@ -43,7 +43,7 @@ def write_to_excel(df, output_excel):
     sheet = wb.sheets[0]
     sheet['A1'].value = df
     sheet['A1'].options(pd.DataFrame, expand='table').value
-    
+    logging.info("Made it this far")
     # remove column 1 which is the df index
     xw.Range("A:A").api.Delete()
 
@@ -154,7 +154,6 @@ def main():
             args.directory, args.exclude, args.keyword)
         df = create_df(markdown_files)
         output_file_path = args.output + "." + args.file_format
-        logging.info(f"Made it here, output file:{output_file_path}")
         if args.file_format == 'csv':
             write_to_csv(df, output_file_path)
             logging.info(f"CSV file successfully created at {output_file_path}")
