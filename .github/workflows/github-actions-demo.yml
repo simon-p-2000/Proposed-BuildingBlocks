@@ -1,6 +1,8 @@
 name: Generate Excel file on release
 run-name: Generating Excel file for release ${{github.ref_name}}
-on: [release]
+on:
+  release:
+    types: [released]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
