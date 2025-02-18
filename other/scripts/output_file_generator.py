@@ -39,19 +39,7 @@ def write_to_excel(df, output_excel):
         df (pandas.DataFrame): DataFrame to write to Excel.
         output_csv (str): Path to the output Excel file.
     """
-    wb = xw.Book()
-    sheet = wb.sheets[0]
-    sheet['A1'].value = df
-    sheet['A1'].options(pd.DataFrame, expand='table').value
-    logging.info("Made it this far")
-    # remove column 1 which is the df index
-    xw.Range("A:A").api.Delete()
-
-    # set header columns bold and autofit the column width to the headers
-    xw.Range((1,1), (1, len(df.columns))).font.bold = True
-
-    wb.save(output_excel)
-    wb.close()
+    df.to_excel(output_excel, index=False)
 
 def write_to_csv(df, output_csv):
     """
