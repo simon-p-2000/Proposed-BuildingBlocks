@@ -3,8 +3,6 @@ run-name: Generating Excel file for release ${{github.ref_name}}
 on:
   release:
     types: [released]
-    branches:
-      -main
 jobs:
   Generate-Excel-File:
     runs-on: windows-latest
