@@ -13,6 +13,10 @@ jobs:
       - name: check out repository code
         uses: actions/checkout@v4
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - name: Remove previous output file
+        uses: actions/rm@v1.0.3
+        with:
+          path: ${{ github.workspace }}\output
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
