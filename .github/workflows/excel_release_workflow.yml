@@ -26,7 +26,7 @@ jobs:
           pip install argparse
           pip install logging
           pip install pandas
-          pip install xlwings
+          pip install openpyxl
       - name: execute py script
         run: python other/scripts/output_file_generator.py ${{ github.workspace }}/ -o ${{ github.workspace }}\output
       - name: commit files
