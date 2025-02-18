@@ -118,6 +118,3 @@ eg.
 - web assembly
 - web service
  -->
-
- ## Bazel compliance status
- <!-- The S-CORE project requires all BB contributions to be ready for BAZEL compliant (https://github.com/bazelbuild/bazel)-->
