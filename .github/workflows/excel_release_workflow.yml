@@ -24,7 +24,6 @@ jobs:
           pip install logging
           pip install pandas
           pip install xlwings
-          pip install re
       - name: execute py script
         run: python other/scripts/output_file_generator.py /
       - name: commit files
