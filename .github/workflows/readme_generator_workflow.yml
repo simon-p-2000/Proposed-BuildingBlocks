@@ -36,6 +36,6 @@ jobs:
           git config --local user.email "simon.pusterhofer@avl.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Automatic creation of readme file after commit on main branch on ${{ BUILD_TIME }}"
+          git commit -m "Automatic creation of readme file after commit on main branch on $BUILD_TIME"
           git push
       - run: echo "Job finished with status ${{ job.status }}."
