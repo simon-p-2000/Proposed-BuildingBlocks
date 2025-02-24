@@ -28,10 +28,18 @@ jobs:
           python -m pip install --upgrade pip
       - name: execute py script
         run: python other/scripts/readme_generator.py
+      - name: check for changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+              echo "CHANGES=true" >> $GITHUB_ENV;
+          else
+            echo "CHANGES=false" >> $GITHUB_ENV;
+          fi
       - name: Get current date
         id: date
         run: echo "BUILD_TIME=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
-      - name: commit files
+      - name: commit and push files
+        if: $CHANGES == 'true'
         run: |
           git config --local user.email "simon.pusterhofer@avl.com"
           git config --local user.name "GitHub Action"
