@@ -39,7 +39,7 @@ jobs:
         id: date
         run: echo "BUILD_TIME=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
       - name: commit and push files
-        if: $FILES_CHANGED == 'true'
+        if: ${{env.FILES_CHANGED}} == 'true'
         run: |
           git config --local user.email "simon.pusterhofer@avl.com"
           git config --local user.name "GitHub Action"
