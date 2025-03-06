@@ -53,6 +53,7 @@ BBs get collected in the [WorkInProgress folder](/WorkInProgress/). As soon as t
         - Time
         - Communication
             - [RTPS-Types](/BB-SC/MWLayer/Communication/RTPS-Types/RTPS-Types.md)
+                - [TEST-COPY](/BB-SC/MWLayer/Communication/RTPS-Types/TEST-COPY.md)
                 - cycloneDDS
                     - [BB_cycloneDDS](/BB-SC/MWLayer/Communication/RTPS-Types/cycloneDDS/BB_cycloneDDS.md)
                 - FastDDS
@@ -110,6 +111,7 @@ BBs get collected in the [WorkInProgress folder](/WorkInProgress/). As soon as t
             - [BB_Local_Update_Manager](/WorkInProgress/BB-SC/MWLayer/Configuration/BB_Local_Update_Manager.md)
         - Tools-and-Methods
             - [BB_Key_Management_System](/WorkInProgress/BB-SC/MWLayer/Tools-and-Methods/BB_Key_Management_System.md)
+            - [BB_Test](/WorkInProgress/BB-SC/MWLayer/Tools-and-Methods/BB_Test.md)
         - Diagnostics
             - [BB_Policy_Manager](/WorkInProgress/BB-SC/MWLayer/Diagnostics/BB_Policy_Manager.md)
         - Storage

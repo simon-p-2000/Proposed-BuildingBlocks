@@ -16,6 +16,7 @@
             - [BB_Local_Update_Manager](/WorkInProgress/BB-SC/MWLayer/Configuration/BB_Local_Update_Manager.md)
         - Tools-and-Methods
             - [BB_Key_Management_System](/WorkInProgress/BB-SC/MWLayer/Tools-and-Methods/BB_Key_Management_System.md)
+            - [BB_Test](/WorkInProgress/BB-SC/MWLayer/Tools-and-Methods/BB_Test.md)
         - Diagnostics
             - [BB_Policy_Manager](/WorkInProgress/BB-SC/MWLayer/Diagnostics/BB_Policy_Manager.md)
         - Storage
