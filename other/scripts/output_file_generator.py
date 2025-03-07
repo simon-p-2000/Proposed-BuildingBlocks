@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO,
 
 template_headings = []
 
+
 def find_markdown_files(directory, excluded_dirs, keyword):
     """
     Traverse the directory to find markdown files that include a specific keyword.
