@@ -42,9 +42,9 @@ jobs:
         id: previous_commit
         run: |
           if git log -1 --pretty=%B | grep -q "[BOT COMMIT]"; then
-              echo "IS_BOT_COMMIT=true" >> $GITHUB_ENV
-          else
               echo "IS_BOT_COMMIT=false" >> $GITHUB_ENV
+          else
+              echo "IS_BOT_COMMIT=true" >> $GITHUB_ENV
           fi
       - name: Get current date
         id: date
