@@ -195,6 +195,7 @@ def main():
 
     try:
         logging.info("Starting script")
+        logging.info(f"Directory:{args.directory}")
         template_file = os.path.join(args.directory, "other/utils/BB_Template.md")
         global template_headings
         logging.info("Getting BB template")
