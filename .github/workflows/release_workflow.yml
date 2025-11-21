@@ -6,7 +6,7 @@ on:
         - cron: '0 0 1 * *'
 jobs:
   Generate-new-release:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write
     steps:
