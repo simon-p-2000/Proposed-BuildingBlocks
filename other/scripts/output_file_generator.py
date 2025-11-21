@@ -194,9 +194,12 @@ def main():
     args = parser.parse_args()
 
     try:
+        logging.info("Starting script")
         template_file = os.path.join(args.directory, "other/utils/BB_Template.md")
         global template_headings
+        logging.info("Getting BB template")
         template_headings = [entry for entry in extract_headings_and_content(template_file, is_template_file=True)]
+        logging.info("Getting BB content")
         markdown_files = find_markdown_files(
             args.directory, args.exclude, args.keyword)
         df = create_df(markdown_files)
