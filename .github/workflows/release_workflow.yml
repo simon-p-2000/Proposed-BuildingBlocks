@@ -32,6 +32,7 @@ jobs:
           run: python other/scripts/output_file_generator.py ${{github.workspace}}
         - name: determine tag name
           id: vars
+          shell: bash
           run: |
             TAG="monthly-$(date +'%Y-%m')"
             echo "tag=$TAG" >> $GITHUB_OUTPUT
